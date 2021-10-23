@@ -55,10 +55,9 @@ vagrant-provision: bin/ansible ## Provision Vagrant box
 	sudo cp .vagrant/machines/default/virtualbox/private_key .vagrant_private_key
 	USER=`whoami` sudo chown ${USER}: .vagrant_private_key
 	ssh-keygen -f ~/.ssh/known_hosts -R "[127.0.0.1]:2222"
-	make run-playbook
 
-.PHONY: run-playbook
-run-playbook: bin/ansible ## Run playbook
+.PHONY: playbook-setup
+playbook-setup: bin/ansible ## Run playbook
 	@echo "$(GREEN)==> Apply playbook $(RESET)"
 	./bin/ansible-playbook -i hosts playbook-setup.yml
 
