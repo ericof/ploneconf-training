@@ -18,6 +18,12 @@ make vagrant-provision
 
 This may take a while to download the Ubuntu 20.04 Vagrant image.
 
+To check if the vagrant box is up and running:
+
+```shell
+sudo vagrant status
+```
+
 ## Configure the server
 
 Now we run an Ansible playbook (`playbook-setup.yml`) that will:

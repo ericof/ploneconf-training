@@ -75,3 +75,7 @@ start: ## Start a Plone instance on localhost:8080
 .PHONY: build-image
 build-image:  ## Build Docker Image
 	@docker build . -t $(IMAGE_NAME) -f Dockerfile
+
+.PHONY: release-image
+release-image:  ## Release Docker Image
+	@docker push $(IMAGE_NAME)

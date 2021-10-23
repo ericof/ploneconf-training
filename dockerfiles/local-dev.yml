@@ -3,7 +3,7 @@ services:
 
   frontend:
     build:
-      context: frontend
+      context: ../frontend
     environment:
       RAZZLE_INTERNAL_API_PATH: http://backend:8080/Plone
       RAZZLE_DEV_PROXY_API_PATH: http://backend:8080/Plone
@@ -15,7 +15,7 @@ services:
 
   backend:
     build:
-      context: backend
+      context: ../backend
     restart: always
     ports:
     - "8080:8080"
