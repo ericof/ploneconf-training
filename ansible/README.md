@@ -48,7 +48,7 @@ ssh plone@127.0.0.1 -p 2222
 ## Create a new Docker context
 
 ```shell
-docker context create vagrant --description "Plone Deployment training" --docker "host=ssh://plone@127.0.0.1:2222
+docker context create vagrant --description "Plone Deployment training" --docker "host=ssh://plone@127.0.0.1:2222"
 ```
 
 ## Pull Docker images
